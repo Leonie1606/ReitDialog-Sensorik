@@ -20,27 +20,39 @@ Verwendete Hardware
 
 Software‑Architektur
 1. Systeminitialisierung
+   
    Beim Start lädt das System gespeicherte Werte aus dem Flash, verbindet sich mit der Cloud und initialisiert den HX711.
    Wird ein Erststart erkannt, führt das System automatisch eine Tare durch.
+   
 3. Benutzerinteraktion
+   
   Über den Serial Monitor können einfache Befehle ausgeführt werden:
   - t → Tare
   - r → Kalibrierung mit Referenzgewicht
   Das System gibt Rückmeldungen und Hinweise über die serielle Schnittstelle aus.
+
 3. Messlogik
+   
   Die Waage wird mehrfach ausgelesen, um stabile Werte zu erhalten.
   Durch Mittelwertbildung und Glättung werden Störungen reduziert.
   Ein Timeout verhindert Blockieren bei fehlender Sensorbereitschaft.
-4. Kalibrier‑Modul
+  
+5. Kalibrier‑Modul
+   
   Nach Eingabe eines bekannten Referenzgewichts berechnet das System automatisch den passenden Kalibrierfaktor.
   Dieser wird gespeichert und bei jedem Start wieder geladen.
-5. Offset‑Modul (Tare)
+  
+7. Offset‑Modul (Tare)
+   
   Die Tare‑Funktion setzt die Waage auf Null und speichert den ermittelten Offset dauerhaft im Flash.
-6. Datenbereitstellung
+  
+9. Datenbereitstellung
+    
   Die berechneten Gewichtswerte werden kontinuierlich:
   - an die Arduino IoT Cloud übertragen
   - im Serial Monitor ausgegeben
   Die Aktualisierung erfolgt in kurzen Intervallen für nahezu Echtzeit‑Feedback.
+
 
 Installation & Setup
 - Repository klonen
