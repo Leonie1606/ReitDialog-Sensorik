@@ -58,13 +58,13 @@ long readRawAverage(int samples, int delayMs = 30) {
   return sum / samples;
 }
 
-// --- Flash speichern ---
+// Flash speichern
 void saveToFlash() {
   storeOffset.write(tare_offset);
   storeCalFactor.write(calibration_factor);
 }
 
-// --- Flash laden ---
+// Flash laden
 void loadFromFlash() {
   tare_offset = storeOffset.read();
   calibration_factor = storeCalFactor.read();
@@ -77,7 +77,7 @@ void loadFromFlash() {
   }
 }
 
-// --- Referenzgewicht manuell ---
+// Referenzgewicht manuell
 void askForReferenceWeight() {
   Serial.println();
   Serial.println("Bitte Referenzgewicht in Gramm eingeben und Enter drücken:");
@@ -116,7 +116,7 @@ void askForReferenceWeight() {
   Serial.println("Kalibrierung abgeschlossen und gespeichert.");
 }
 
-// --- Tare ---
+// Tare
 void doTare() {
   Serial.println("Tare läuft... bitte nichts auflegen.");
   scale.tare(10);
@@ -196,4 +196,5 @@ void loop() {
   Serial.println(gewicht_rechts);
 
   delay(200);
+
 }
