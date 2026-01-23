@@ -1,4 +1,5 @@
 Firmware für Dual‑Waagen‑System (ESP33 IoT + HX711)
+
 Dieses Repository enthält die Firmware für zwei unabhängige Waagenmodule („WaageLinks“ und „WaageRechts“) auf Basis eines ESP33 IoT und eines HX711‑Verstärkers.
 Beide Module erfassen Gewichtsdaten, führen Tare und Kalibrierung durch, speichern Einstellungen dauerhaft im Flash und übertragen die Messwerte an die Arduino IoT Cloud.
 
