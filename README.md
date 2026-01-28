@@ -11,6 +11,7 @@ Funktionen
 - Dauerhafte Speicherung von Offset und Kalibrierfaktor
 - Cloud‑Anbindung über die Arduino IoT Cloud (MQTT)
 - Serielle Befehle zur Steuerung (Tare, Kalibrierung)
+  
 Verwendete Hardware
 - ESP33 IoT
 - HX711‑Modul
